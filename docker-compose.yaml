@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+
+  statsd:
+    image: trimm/statsd-appinsights
+    ports:
+    - '8125:8125/udp'
+    - '8126:8126'
+    environment:
+      DEBUG: false
+      AI_PREFIX: prefix
+      AI_ROLE_NAME: rolename
+      AI_ROLE_INSTANCE: instancename
+      AI_INSTRUMENTATION_KEY: instrumentation-key
+
